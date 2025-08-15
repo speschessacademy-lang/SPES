@@ -1,6 +1,7 @@
 "use client";
 
 import { Card, CardContent } from "@/components/ui/card";
+import site from "@/content/site.json";
 import { Award, Users, Target, Trophy } from "lucide-react";
 
 export default function AboutSection() {
@@ -34,39 +35,33 @@ export default function AboutSection() {
           <div>
             <div className="text-sm font-semibold text-black mb-2">ABOUT SPES</div>
             <h2 className="text-4xl md:text-5xl font-bold text-black mb-6">
-              Excellence in Chess Education
+              {site.about.heading}
             </h2>
-            <p className="text-lg text-gray-700 mb-8 leading-relaxed">
-              Founded with a vision to create world-class chess players, SPES has become the premier destination 
-              for serious chess education. Our academy combines traditional chess wisdom with modern training 
-              methodologies to develop strategic thinkers and tactical masters.
-            </p>
-            <p className="text-lg text-gray-700 mb-8 leading-relaxed">
-              From beginners taking their first steps to experienced players aiming for grandmaster titles, 
-              we provide the guidance, resources, and competitive environment needed to excel in the royal game.
-            </p>
+            {site.about.paragraphs.map((p, i) => (
+              <p key={i} className="text-lg text-[#6E5A8E] mb-8 leading-relaxed">{p}</p>
+            ))}
             
             <div className="grid grid-cols-2 gap-6">
-              <div className="text-center p-4 border border-gray-200 rounded-lg">
-                <div className="text-3xl font-bold text-black">8</div>
-                <div className="text-sm text-gray-700">Years of Excellence</div>
+              <div className="text-center p-4 border border-[#EADFF3] bg-[#F7EEF9] rounded-lg">
+                <div className="text-3xl font-bold text-black">{site.about.stats.years}</div>
+                <div className="text-sm text-[#6E5A8E]">Years of Excellence</div>
               </div>
-              <div className="text-center p-4 border border-gray-200 rounded-lg">
-                <div className="text-3xl font-bold text-black">15</div>
-                <div className="text-sm text-gray-700">Expert Coaches</div>
+              <div className="text-center p-4 border border-[#EADFF3] bg-[#F7EEF9] rounded-lg">
+                <div className="text-3xl font-bold text-black">{site.about.stats.coaches}</div>
+                <div className="text-sm text-[#6E5A8E]">Coaches</div>
               </div>
             </div>
           </div>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
             {values.map((value, index) => (
-              <Card key={index} className="border border-gray-200 hover:shadow-lg transition-shadow duration-300">
+              <Card key={index} className="border border-[#EADFF3] hover:shadow-lg transition-shadow duration-300 bg-white">
                 <CardContent className="p-6">
-                  <div className="w-12 h-12 bg-gray-100 rounded-lg flex items-center justify-center mb-4">
-                    <value.icon className="h-6 w-6 text-black" />
+                  <div className="w-12 h-12 bg-[#FFE1E0] rounded-lg flex items-center justify-center mb-4">
+                    <value.icon className="h-6 w-6 text-[#7F55B1]" />
                   </div>
                   <h3 className="text-lg font-semibold text-black mb-2">{value.title}</h3>
-                  <p className="text-sm text-gray-700">{value.description}</p>
+                  <p className="text-sm text-[#6E5A8E]">{value.description}</p>
                 </CardContent>
               </Card>
             ))}

@@ -1,0 +1,33 @@
+{
+  "hero": {
+    "title": "Master Chess Strategy at SPES",
+    "subtitle": "School for Professional and Elite Strategy – A Global Hub Where Champions Rise. Train with FIDE-rated coaches, sharpen your tactics, and join the next generation of elite players.",
+    "ctaPrimary": "Start Your Journey",
+    "ctaSecondary": "Learn More",
+    "stats": {
+      "students": "500+",
+      "coaches": "10",
+      "champions": "50+"
+    }
+  },
+  "about": {
+    "heading": "Excellence in Chess Education",
+    "paragraphs": [
+      "At SPES (School for Professional and Elite Strategy), we are dedicated to nurturing talent and building champions in the world of chess. Founded with a clear mission to offer world-class chess education, our academy has quickly earned a reputation as a premier training ground for aspiring players of all levels.",
+      "We combine the rich heritage of classical chess with modern, scientifically-designed training methods. Our structured programs are crafted to develop not just strong chess skills, but also critical thinking, discipline, and strategic decision-making—skills that benefit children far beyond the chessboard.",
+      "Whether your child is a beginner discovering the game or an advanced player pursuing national or international success, SPES provides the personalized coaching, competitive exposure, and mentorship needed to unlock their full potential."
+    ],
+    "stats": {
+      "years": "8",
+      "coaches": "10"
+    }
+  },
+  "contact": {
+    "heading": "Start Your Chess Journey Today",
+    "lead": "Ready to transform your chess skills? Get in touch with our team to discuss your goals and find the perfect program for your chess development."
+  },
+  "footer": {
+    "blurb": "School for Professional and Elite Strategy – A Global Hub Where Champions Rise. Train with FIDE-rated coaches, sharpen your tactics, and join the next generation of elite players."
+  }
+}
+

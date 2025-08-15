@@ -1,0 +1,37 @@
+{
+  "items": [
+    {
+      "name": "Sarah Chen",
+      "title": "National Master",
+      "rating": 5,
+      "text": "SPES transformed my understanding of chess strategy. The personalized coaching and structured curriculum helped me achieve my National Master title in just 18 months. The instructors are world-class.",
+      "image": "/images/placeholder-avatar-1.jpg",
+      "achievement": "Rating: 2200+"
+    },
+    {
+      "name": "Marcus Rodriguez",
+      "title": "Youth Champion",
+      "rating": 5,
+      "text": "My son joined SPES at age 10 with basic knowledge. Within 2 years, he became the U12 National Champion. The academy doesn't just teach chess - they build champions with discipline and strategic thinking.",
+      "image": "/images/placeholder-avatar-2.jpg",
+      "achievement": "U12 National Champion 2024"
+    },
+    {
+      "name": "Dr. Emily Watson",
+      "title": "Parent & Chess Enthusiast",
+      "rating": 5,
+      "text": "As a parent, I was amazed by the transformation I saw in my daughter. Beyond chess skills, SPES taught her critical thinking, patience, and confidence. The supportive community is exceptional.",
+      "image": "/images/placeholder-avatar-3.jpg",
+      "achievement": "Daughter: 1800+ Rating"
+    },
+    {
+      "name": "David Kim",
+      "title": "Adult Learner",
+      "rating": 5,
+      "text": "Starting chess at 35, I thought it was too late. SPES proved me wrong. The structured approach and encouraging coaches made learning enjoyable. I'm now competing in local tournaments with confidence.",
+      "image": "/images/placeholder-avatar-4.jpg",
+      "achievement": "Rating: 1600+ in 1 year"
+    }
+  ]
+}
+

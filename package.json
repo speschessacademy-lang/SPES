@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev --turbopack",
+    "dev": "TINA_PUBLIC_IS_LOCAL=true tinacms dev -c \"next dev --turbopack\"",
     "build": "next build",
     "start": "next start",
     "lint": "next lint"
@@ -24,12 +24,14 @@
     "react-dom": "19.1.0",
     "react-hook-form": "^7.61.1",
     "tailwind-merge": "^3.3.1",
+    "tinacms": "^2.8.2",
     "zod": "^4.0.14"
   },
   "devDependencies": {
     "@eslint/eslintrc": "^3",
     "@tailwindcss/postcss": "^4",
-    "@types/node": "^20",
+    "@tinacms/cli": "^1.10.2",
+    "@types/node": "^20.19.10",
     "@types/react": "^19",
     "@types/react-dom": "^19",
     "eslint": "^9",

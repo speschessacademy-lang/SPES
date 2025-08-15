@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import site from "@/content/site.json";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
@@ -61,13 +62,8 @@ export default function ContactSection() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <div className="text-sm font-semibold text-black mb-2">CONTACT & ENROLLMENT</div>
-          <h2 className="text-4xl md:text-5xl font-bold text-black mb-4">
-            Start Your Chess Journey Today
-          </h2>
-          <p className="text-xl text-gray-700 max-w-3xl mx-auto">
-            Ready to transform your chess skills? Get in touch with our team to discuss 
-            your goals and find the perfect program for your chess development.
-          </p>
+          <h2 className="text-4xl md:text-5xl font-bold text-black mb-4">{site.contact.heading}</h2>
+          <p className="text-xl text-[#6E5A8E] max-w-3xl mx-auto">{site.contact.lead}</p>
         </div>
 
         <div className="grid lg:grid-cols-2 gap-12 max-w-6xl mx-auto">
@@ -76,7 +72,7 @@ export default function ContactSection() {
             <Card className="shadow-xl border-0">
               <CardHeader className="pb-8">
                 <CardTitle className="text-2xl font-bold text-gray-900">Enrollment Inquiry</CardTitle>
-                <CardDescription className="text-gray-600">
+                <CardDescription className="text-[#6E5A8E]">
                   Fill out the form below and our team will contact you within 24 hours
                 </CardDescription>
               </CardHeader>
@@ -85,7 +81,7 @@ export default function ContactSection() {
                 <form onSubmit={handleSubmit} className="space-y-6">
                   <div className="grid sm:grid-cols-2 gap-4">
                     <div>
-                      <Label htmlFor="name" className="text-gray-700">Full Name *</Label>
+                      <Label htmlFor="name" className="text-[#6E5A8E]">Full Name *</Label>
                       <Input
                         id="name"
                         name="name"
@@ -99,7 +95,7 @@ export default function ContactSection() {
                     </div>
                     
                     <div>
-                      <Label htmlFor="email" className="text-gray-700">Email Address *</Label>
+                      <Label htmlFor="email" className="text-[#6E5A8E]">Email Address *</Label>
                       <Input
                         id="email"
                         name="email"
@@ -115,7 +111,7 @@ export default function ContactSection() {
 
                   <div className="grid sm:grid-cols-2 gap-4">
                     <div>
-                      <Label htmlFor="phone" className="text-gray-700">Phone Number</Label>
+                      <Label htmlFor="phone" className="text-[#6E5A8E]">Phone Number</Label>
                       <Input
                         id="phone"
                         name="phone"
@@ -128,13 +124,13 @@ export default function ContactSection() {
                     </div>
                     
                     <div>
-                      <Label htmlFor="program" className="text-gray-700">Interested Program</Label>
+                      <Label htmlFor="program" className="text-[#6E5A8E]">Interested Program</Label>
                       <select
                         id="program"
                         name="program"
                         value={formData.program}
                         onChange={handleInputChange}
-                        className="w-full mt-1 px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                        className="w-full mt-1 px-3 py-2 border border-[#EADFF3] rounded-md focus:outline-none focus:ring-2 focus:ring-[#9B7EBD] focus:border-transparent"
                       >
                         <option value="">Select a program</option>
                         <option value="beginner">Beginner Foundation</option>
@@ -146,21 +142,21 @@ export default function ContactSection() {
                   </div>
 
                   <div>
-                    <Label htmlFor="message" className="text-gray-700">Message</Label>
+                    <Label htmlFor="message" className="text-[#6E5A8E]">Message</Label>
                     <Textarea
                       id="message"
                       name="message"
                       rows={4}
                       value={formData.message}
                       onChange={handleInputChange}
-                      className="mt-1"
+                      className="mt-1 border border-[#EADFF3] focus:ring-2 focus:ring-[#9B7EBD] focus:border-transparent"
                       placeholder="Tell us about your chess experience and goals..."
                     />
                   </div>
 
                   <Button
                     type="submit"
-                    className="w-full bg-black hover:bg-gray-800 text-white py-3 rounded-lg font-semibold"
+                    className="w-full bg-[#7F55B1] hover:bg-[#6e49a0] text-white py-3 rounded-lg font-semibold"
                   >
                     <Send className="h-4 w-4 mr-2" />
                     Send Message
@@ -187,8 +183,8 @@ export default function ContactSection() {
                     href={info.href}
                     className="flex items-start space-x-4 p-4 rounded-lg hover:bg-gray-50 transition-colors group"
                   >
-                    <div className="w-10 h-10 bg-blue-100 rounded-lg flex items-center justify-center group-hover:bg-blue-200 transition-colors">
-                      <info.icon className="h-5 w-5 text-blue-600" />
+                    <div className="w-10 h-10 bg-[#FFE1E0] rounded-lg flex items-center justify-center group-hover:bg-[#F49BAB]/40 transition-colors">
+                      <info.icon className="h-5 w-5 text-[#7F55B1]" />
                     </div>
                     <div>
                       <h4 className="font-semibold text-gray-900">{info.title}</h4>
@@ -196,42 +192,6 @@ export default function ContactSection() {
                     </div>
                   </a>
                 ))}
-              </CardContent>
-            </Card>
-
-            <Card className="border border-gray-200 shadow-xl">
-              <CardHeader>
-                <CardTitle className="text-2xl font-bold text-black">Special Offer</CardTitle>
-                <CardDescription className="text-gray-700">
-                  Limited time for new students
-                </CardDescription>
-              </CardHeader>
-              
-              <CardContent>
-                <div className="space-y-4">
-                  <div>
-                    <div className="text-3xl font-bold text-black mb-2">Free Assessment</div>
-                    <p className="text-gray-700">
-                      Get a comprehensive chess skills evaluation with one of our grandmaster coaches. 
-                      Valued at $150, now FREE for new students.
-                    </p>
-                  </div>
-                  
-                  <ul className="text-sm text-gray-700 space-y-2">
-                    <li className="flex items-center">✓ 60-minute one-on-one session</li>
-                    <li className="flex items-center">✓ Personalized learning plan</li>
-                    <li className="flex items-center">✓ Program recommendation</li>
-                    <li className="flex items-center">✓ No obligation to enroll</li>
-                  </ul>
-                  
-                  <div className="pt-4">
-                    <div className="text-xs text-gray-500 mb-2">⏰ Limited spots remaining this month
-                    </div>
-                    <Button className="w-full bg-black hover:bg-gray-800 text-white font-semibold">
-                      Book Free Assessment
-                    </Button>
-                  </div>
-                </div>
               </CardContent>
             </Card>
           </div>

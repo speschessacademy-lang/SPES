@@ -1,3 +1,19 @@
+Admin (TinaCMS) - Free, no custom backend
+
+Local dev
+- npm run dev
+- Visit http://localhost:3000/admin to open the editor
+
+Vercel deploy setup
+- Create a TinaCMS project at tina.io (free tier is fine)
+- In Vercel Project Settings → Environment Variables add:
+  - NEXT_PUBLIC_TINA_CLIENT_ID=<client-id-from-tina>
+  - TINA_TOKEN=<token-from-tina>
+- Build command: tinacms build && next build (already configured in package.json)
+
+Editing content
+- Hero/About/Contact/Footer text: src/content/site.json
+- Testimonials: src/content/testimonials.json
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
 ## Getting Started
