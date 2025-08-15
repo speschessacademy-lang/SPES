@@ -9,7 +9,8 @@ Vercel deploy setup
 - In Vercel Project Settings → Environment Variables add:
   - NEXT_PUBLIC_TINA_CLIENT_ID=<client-id-from-tina>
   - TINA_TOKEN=<token-from-tina>
-- Build command: tinacms build && next build (already configured in package.json)
+- Build command (recommended once envs are set): `npm run build:with-tina`
+  - If you don't want CMS in prod yet, keep using `npm run build` (Next only)
 
 Editing content
 - Hero/About/Contact/Footer text: src/content/site.json
