@@ -35,7 +35,7 @@ export default defineConfig({
         path: "src/content",
         format: "json",
         match: {
-          include: ["site"],
+          include: "site",
         },
         fields: [
           {
@@ -101,7 +101,7 @@ export default defineConfig({
         label: "Achievements",
         path: "src/content",
         format: "json",
-        match: { include: ["achievements"] },
+        match: { include: "achievements" },
         fields: [
           {
             type: "object",
@@ -120,7 +120,7 @@ export default defineConfig({
         label: "Testimonials",
         path: "src/content",
         format: "json",
-        match: { include: ["testimonials"] },
+        match: { include: "testimonials" },
         fields: [
           {
             type: "object",
