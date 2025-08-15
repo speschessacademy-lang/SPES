@@ -5,8 +5,17 @@ import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Star } from "lucide-react";
 import testimonialsDoc from "@/content/testimonials.json";
 
+type Testimonial = {
+  name: string;
+  title: string;
+  rating: number;
+  text: string;
+  image?: string;
+  achievement?: string;
+};
+
 export default function TestimonialsSection() {
-  const testimonials = (testimonialsDoc as { items: any[] }).items as Array<{
+  const testimonials = (testimonialsDoc as { items: Testimonial[] }).items as Array<{
     name: string;
     title: string;
     rating: number;

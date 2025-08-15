@@ -9,7 +9,10 @@ type AchievementItem = {
 };
 
 export default function AchievementsSection() {
-  const items = (achievementsDoc as { items: AchievementItem[] }).items || [];
+  const items = useMemo<AchievementItem[]>(
+    () => ((achievementsDoc as { items: AchievementItem[] }).items ?? []),
+    []
+  );
   const INITIAL_VISIBLE = 10;
   const [showAll, setShowAll] = useState(false);
   const [lightboxIndex, setLightboxIndex] = useState<number | null>(null);
