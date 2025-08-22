@@ -7,7 +7,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
-import { Mail, Phone, MapPin, Clock, Send } from "lucide-react";
+import { Phone, MapPin, Clock, Send } from "lucide-react";
 
 export default function ContactSection() {
   const [formData, setFormData] = useState({
@@ -32,22 +32,16 @@ export default function ContactSection() {
 
   const contactInfo = [
     {
-      icon: Mail,
-      title: "Email",
-      value: "admissions@spes-chess.com",
-      href: "mailto:admissions@spes-chess.com"
-    },
-    {
       icon: Phone,
       title: "Phone",
-      value: "+1 (555) 123-CHESS",
-      href: "tel:+15551232437"
+      value: "+91 6235 603556",
+      href: "tel:+916235603556"
     },
     {
       icon: MapPin,
-      title: "Location",
-      value: "123 Grandmaster Avenue, Chess District, NY 10001",
-      href: "#"
+      title: "Official Address",
+      value: "SPES Chess Academy, Kolani Junction, Temple Road (Kolani Bypass Road), Thodupuzha – 685608, Idukki District, Kerala, India",
+      href: "https://maps.google.com/?q=SPES+Chess+Academy+Kolani+Junction+Thodupuzha+Kerala+India"
     },
     {
       icon: Clock,
@@ -184,7 +178,7 @@ export default function ContactSection() {
                     className="flex items-start space-x-4 p-4 rounded-lg hover:bg-gray-50 transition-colors group"
                   >
                     <div className="w-10 h-10 bg-[#FFE1E0] rounded-lg flex items-center justify-center group-hover:bg-[#F49BAB]/40 transition-colors">
-                      <info.icon className="h-5 w-5 text-[#7F55B1]" />
+                      <info.icon className={`${info.title === 'Official Address' ? 'h-5 w-10' : 'h-5 w-5'} text-[#7F55B1]`} />
                     </div>
                     <div>
                       <h4 className="font-semibold text-gray-900">{info.title}</h4>
