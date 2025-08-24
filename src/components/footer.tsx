@@ -1,6 +1,6 @@
 "use client";
 
-import { Mail, Phone, MapPin, ExternalLink } from "lucide-react";
+import { Phone, MapPin, ExternalLink } from "lucide-react";
 import Link from "next/link";
 
 export default function Footer() {
@@ -96,16 +96,12 @@ export default function Footer() {
             <h3 className="text-lg font-semibold mb-4">Contact</h3>
             <ul className="space-y-2">
               <li className="flex items-center text-gray-400 text-sm">
-                <Mail className="h-4 w-4 mr-2" />
-                admissions@spes-chess.com
-              </li>
-              <li className="flex items-center text-gray-400 text-sm">
                 <Phone className="h-4 w-4 mr-2" />
-                +1 (555) 123-CHESS
+                +91 6235 603556
               </li>
-              <li className="flex items-center text-gray-400 text-sm">
-                <MapPin className="h-4 w-4 mr-2" />
-                123 Grandmaster Avenue, Chess District, NY 10001
+              <li className="flex items-start text-gray-400 text-sm">
+                <MapPin className="h-4 w-4 mr-2 mt-0.5 flex-shrink-0" />
+                <span>SPES Chess Academy, Kolani Junction, Temple Road (Kolani Bypass Road), Thodupuzha – 685608, Idukki District, Kerala, India</span>
               </li>
             </ul>
           </div>
