@@ -7,6 +7,8 @@ const branch =
   process.env.HEAD ||
   "main";
 
+const isLocal = process.env.TINA_PUBLIC_IS_LOCAL === "true";
+
 export default defineConfig({
   branch,
 
@@ -14,7 +16,9 @@ export default defineConfig({
   clientId: process.env.NEXT_PUBLIC_TINA_CLIENT_ID,
   // Get this from tina.io
   token: process.env.TINA_TOKEN,
-  contentApiUrlOverride: process.env.NEXT_PUBLIC_TINA_CLIENT_ID && process.env.TINA_TOKEN ? undefined : undefined,
+  // When running `tinacms dev`, Tina starts a local GraphQL server (default: http://localhost:4001/graphql).
+  // Without this override, the Admin UI can't talk to the local server (and uploads/saves look "broken").
+  contentApiUrlOverride: isLocal ? "http://localhost:4001/graphql" : undefined,
 
   build: {
     outputFolder: "admin",
