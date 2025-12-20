@@ -113,3 +113,4 @@ export default function AchievementsGallery({ items }: { items: AchievementItem[
   );
 }
 
+
